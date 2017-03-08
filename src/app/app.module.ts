@@ -4,17 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CharacterThumbnailComponent } from './character-thumbnail/character-thumbnail.component';
+
+import { CharactersService } from './characters/characters.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CharacterThumbnailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
